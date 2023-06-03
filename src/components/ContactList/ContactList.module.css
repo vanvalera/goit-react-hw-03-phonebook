@@ -1,28 +1,53 @@
-ul {
-  margin: 0;
-  padding: 0;
+.container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-end;
 }
-.contact__list {
+
+.contact__ul {
+  padding: 0;
+  margin: 0;
   list-style: none;
-  font-size: 20px;
 }
+
+.contact__list {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.icon__contact {
+  size: 16px;
+  margin-right: 10px;
+  color: rgb(21, 58, 100);
+}
+.icon__contact:hover {
+  color: blue;
+  transform: scale(1.1);
+}
+
 .delete__contact {
+  padding: 5;
   border-radius: 8px;
   border: none;
   cursor: pointer;
   margin-left: auto;
+  margin-right: 0;
+  background: white;
 }
-.delete__contact:hover {
+
+.contact__list:not(:last-child) {
+  margin-bottom: 5px;
+}
+.icon__close {
+  display: flex;
+  justify-content: center;
+}
+.delete__contact:hover .icon__close {
   color: white;
   background: red;
-  transition: 500ms;
-  transform: scale(1.1);
-}
-.delete__contact:not(:hover) {
-  transition: 500ms;
-  transform: scale(1);
+  cursor: pointer;
+  transform: scale(1.3);
+  border-radius: 8px;
 }
