@@ -18,5 +18,4 @@ Filter.propTypes = {
   filter: PropTypes.string,
   handleChange: PropTypes.func,
 };
-
 export default Filter;
